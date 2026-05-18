@@ -6,8 +6,7 @@ document.getElementById('form-encomenda').addEventListener('submit', function(ev
     const instagram = document.getElementById('instagram-cliente').value;
     const detalhes = document.getElementById('detalhes').value;
 
-    // Número de telefone da Bia (coloque o número com DDD aqui, ex: 5511999999999)
-    // Por enquanto vou deixar um modelo, depois você altera!
+    // Número de telefone da Bia configurado
     const numeroWhats = "5521996457245"; 
 
     // Monta a mensagem bonita para o WhatsApp
