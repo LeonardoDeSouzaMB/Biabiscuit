@@ -362,10 +362,20 @@ footer {
 .whatsapp-flutuante:hover {
     transform: scale(1.1);
 }
-/* FUNDO INTERATIVO COM O MOUSE */
+/* NOVO FUNDO ANIMADO E FLUIDO */
 body {
-    background-position: center; /* Centraliza a imagem inicialmente */
+    background-image: url('fundo-biscuit-fluido.png'); /* Caminho para a nova imagem */
+    background-size: cover; /* A imagem cobre todo o fundo */
+    background-attachment: fixed; /* O fundo permanece fixo enquanto você rola */
+    animation: moveBackgroundFluido 180s linear infinite; /* Animação mais suave */
 }
 
-/* Esta parte do código exige um pouco de JavaScript para funcionar corretamente. 
-   Se você quiser esta funcionalidade, me avise e eu te dou o código JavaScript necessário. */
+/* NOVA ANIMAÇÃO DO FUNDO FLUIDO */
+@keyframes moveBackgroundFluido {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 100% 100%; /* A animação flui por todo o fundo */
+    }
+}
