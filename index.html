@@ -4,27 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bia Biscuit - Arte em Modelagem</title>
-    <!-- Link para o arquivo de estilo (CSS) -->
     <link rel="stylesheet" href="style.css">
-    <!-- Ícones do FontAwesome para as redes sociais -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
-    <!-- CABEÇALHO E MENU DE NAVEGAÇÃO -->
     <header>
         <div class="logo">Bia Biscuit</div>
         <nav>
             <ul>
                 <li><a href="#home">Início</a></li>
                 <li><a href="#galeria">Trabalhos</a></li>
+                <li><a href="#sobre">Sobre Mim</a></li>
                 <li><a href="#encomendas">Encomendar</a></li>
-                <li><a href="#contato">Contato</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- SEÇÃO HOME (INÍCIO) -->
     <section id="home" class="hero">
         <div class="hero-content">
             <h1>Eternizando momentos em forma de biscuit</h1>
@@ -33,54 +29,82 @@
         </div>
     </section>
 
-    <!-- SEÇÃO GALERIA (FOTOS DOS PRODUTOS) -->
     <section id="galeria">
         <h2>Meus Trabalhos</h2>
+        <p class="subtitulo-secao">Conheça algumas das fofuras produzidas no ateliê</p>
         <div class="galeria-container">
-            <!-- Os blocos de fotos vão entrar aqui -->
+            
             <div class="produto-card">
-                <img src="https://via.placeholder.com/300" alt="Produto Exemplo">
-                <h3>Topo de Bolo Noivos</h3>
+                <div class="imagem-wrapper">
+                    <img src="https://images.unsplash.com/photo-1596464716127-f2a82984de30?w=500&auto=format&fit=crop&q=60" alt="Topo de Bolo Noivos">
+                </div>
+                <h3>Topos de Bolo</h3>
+                <p>Noivos, aniversários e datas especiais personalizados.</p>
             </div>
+            
             <div class="produto-card">
-                <img src="https://via.placeholder.com/300" alt="Produto Exemplo">
-                <h3>Lembrancinha Maternidade</h3>
+                <div class="imagem-wrapper">
+                    <img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?w=500&auto=format&fit=crop&q=60" alt="Lembrancinha Maternidade">
+                </div>
+                <h3>Lembrancinhas</h3>
+                <p>Maternidade, casamentos e chás de bebê inesquecíveis.</p>
+            </div>
+
+            <div class="produto-card">
+                <div class="imagem-wrapper">
+                    <img src="https://images.unsplash.com/photo-1566121318359-90038964b5e0?w=500&auto=format&fit=crop&q=60" alt="Personagens Geek e Humanizados">
+                </div>
+                <h3>Peças Humanizadas</h3>
+                <p>Bonecos personalizados com as suas características.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="sobre" class="sobre-secao">
+        <div class="sobre-container">
+            <div class="sobre-texto">
+                <h2>Quem faz a mágica?</h2>
+                <h3>Prazer, eu sou a Bia! ❤️</h3>
+                <p>A paixão pela modelagem começou como um hobby e logo se transformou no amor da minha vida. Cada peça de biscuit que sai do meu ateliê carrega uma história única, muitos detalhes e, acima de tudo, o carinho necessário para tornar a sua celebração ainda mais especial.</p>
+                <p>Trabalho com materiais de alta qualidade para garantir que a sua recordação dure por muitos e muitos anos. Vamos dar vida à sua ideia?</p>
+                <a href="#encomendas" class="btn-secundario">Conversar com a Bia</a>
             </div>
         </div>
     </section>
 
-    <!-- SEÇÃO DE ENCOMENDAS (FORMULÁRIO) -->
     <section id="encomendas">
         <h2>Faça sua Encomenda</h2>
+        <p class="form-ajuda">Preencha os detalhes e eu te responderei direto no WhatsApp com o seu orçamento!</p>
         <form id="form-encomenda">
             <label for="nome">Seu Nome:</label>
-            <input type="text" id="nome" required placeholder="Digite seu nome">
+            <input type="text" id="nome" required placeholder="Digite seu nome completo">
 
             <label for="instagram-cliente">Seu Instagram:</label>
-            <input type="text" id="instagram-cliente" placeholder="@seu.perfil">
+            <input type="text" id="instagram-cliente" placeholder="Ex: @seu.perfil">
 
             <label for="detalhes">Detalhes do Pedido:</label>
-            <textarea id="detalhes" required placeholder="Ex: Topo de bolo de casamento com cachorrinho..."></textarea>
+            <textarea id="detalhes" required placeholder="Ex: Preciso de um topo de bolo de casamento com os noivos e um cachorrinho vira-lata para o dia 15 de Outubro..."></textarea>
 
-            <button type="submit" class="btn-enviar">Enviar Pedido via WhatsApp</button>
+            <button type="submit" class="btn-enviar">Enviar Pedido via WhatsApp <i class="fab fa-whatsapp"></i></button>
         </form>
     </section>
 
-    <!-- RODAPÉ E CONTATOS -->
     <footer>
         <div class="contato-info" id="contato">
-            <h3>Siga a Bia Biscuit</h3>
+            <h3>Siga a Bia Biscuit nas Redes</h3>
             <div class="redes-sociais">
-                <!-- Substitua o link depois pelo Insta real da Bia -->
                 <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i> @biabiscuit</a>
             </div>
             <p>© 2026 Bia Biscuit. Todos os direitos reservados.</p>
+            <p style="font-size: 11px; margin-top: 10px; color: #aaa;">Desenvolvido com ❤️</p>
         </div>
     </footer>
 
     <a href="https://wa.me/5521996457245?text=Olá%20Bia!%20Vim%20pelo%20seu%20site%20e%20gostaria%20de%20tirar%20uma%20dúvida." class="whatsapp-flutuante" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
-    <!-- Link para o arquivo de funções (JavaScript) -->
     <script src="script.js"></script>
 </body>
 </html>
