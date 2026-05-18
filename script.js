@@ -8,7 +8,7 @@ document.getElementById('form-encomenda').addEventListener('submit', function(ev
 
     // Número de telefone da Bia (coloque o número com DDD aqui, ex: 5511999999999)
     // Por enquanto vou deixar um modelo, depois você altera!
-    const numeroWhats = "5500000000000"; 
+    const numeroWhats = "5521996457245"; 
 
     // Monta a mensagem bonita para o WhatsApp
     const textoMensagem = `Olá Bia! Meu nome é ${nome} (Insta: ${instagram}). Gostaria de fazer uma encomenda de biscuit: ${detalhes}`;
