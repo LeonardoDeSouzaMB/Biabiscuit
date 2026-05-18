@@ -1,4 +1,20 @@
-/* IMPORTANDO FONTES DO GOOGLE */
+/* FUNDO ANIMADO COM BISCUIT */
+body {
+    background-image: url('fundo-biscuit.png'); /* Caminho para a imagem que você subiu */
+    background-size: 400px; /* Ajuste o tamanho da imagem de fundo conforme necessário */
+    background-attachment: fixed; /* O fundo permanece fixo enquanto você rola a página */
+    animation: moveBackground 120s linear infinite; /* Aplica a animação ao fundo */
+}
+
+/* DEFINIÇÃO DA ANIMAÇÃO DO FUNDO */
+@keyframes moveBackground {
+    from {
+        background-position: 0 0; /* Posição inicial */
+    }
+    to {
+        background-position: 400px 400px; /* Posição final (mesmo tamanho que background-size) */
+    }
+}/* IMPORTANDO FONTES DO GOOGLE */
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600;700&display=swap');
 
 /* CONFIGURAÇÕES GERAIS */
@@ -346,3 +362,10 @@ footer {
 .whatsapp-flutuante:hover {
     transform: scale(1.1);
 }
+/* FUNDO INTERATIVO COM O MOUSE */
+body {
+    background-position: center; /* Centraliza a imagem inicialmente */
+}
+
+/* Esta parte do código exige um pouco de JavaScript para funcionar corretamente. 
+   Se você quiser esta funcionalidade, me avise e eu te dou o código JavaScript necessário. */
