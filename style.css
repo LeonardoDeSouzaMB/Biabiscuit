@@ -1,14 +1,18 @@
+/* IMPORTANDO FONTES DO GOOGLE */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600;700&display=swap');
+
 /* CONFIGURAÇÕES GERAIS */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Poppins', sans-serif; /* Letra principal super moderna e limpa */
 }
 
 body {
-    background-color: #FFF0F5; /* LavenderBlush - um rosa bebê bem clarinho de fundo */
-    color: #4A154B; /* Roxo escuro para os textos ficarem fáceis de ler */
+    background-color: #FFF0F5; /* Rosa bebê de fundo bem sutil */
+    color: #4A154B; /* Roxo escuro para excelente leitura */
+    scroll-behavior: smooth; /* Efeito de deslizar suave ao clicar no menu */
 }
 
 /* MENU DE NAVEGAÇÃO */
@@ -17,17 +21,19 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 5%;
-    border-bottom: 3px solid #FF1493; /* Linha Rosa Choque */
+    padding: 15px 5%;
+    border-bottom: 3px solid #FF1493; /* Detalhe em Rosa Choque */
     position: sticky;
     top: 0;
     z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
 .logo {
-    font-size: 24px;
-    font-weight: bold;
+    font-family: 'Pacifico', cursive; /* Letra em formato de desenho/biscuit */
+    font-size: 28px;
     color: #FF1493; /* Rosa Choque */
+    text-shadow: 1px 1px 2px rgba(138, 43, 226, 0.2);
 }
 
 nav ul {
@@ -36,36 +42,41 @@ nav ul {
 }
 
 nav ul li {
-    margin-left: 20px;
+    margin-left: 25px;
 }
 
 nav ul li a {
     text-decoration: none;
     color: #8A2BE2; /* Violeta */
     font-weight: 600;
+    font-size: 15px;
     transition: 0.3s;
 }
 
 nav ul li a:hover {
-    color: #FF1493; /* Muda para rosa choque ao passar o mouse */
+    color: #FF1493; /* Muda para rosa choque no mouse */
 }
 
 /* SEÇÃO PRINCIPAL (HERO) */
 .hero {
-    background: linear-gradient(135deg, #FFE4E1 0%, #E6E6FA 100%); /* Degradê Rosa Bebê com Lilás */
-    padding: 80px 5%;
+    background: linear-gradient(135deg, #FFE4E1 0%, #E6E6FA 100%); /* Degradê suave rosa e lilás */
+    padding: 100px 5%;
     text-align: center;
 }
 
 .hero h1 {
-    font-size: 36px;
+    font-family: 'Pacifico', cursive;
+    font-size: 42px;
     color: #FF1493;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    line-height: 1.4;
 }
 
 .hero p {
     font-size: 18px;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
+    color: #555;
+    font-weight: 300;
 }
 
 /* BOTÕES */
@@ -73,72 +84,170 @@ nav ul li a:hover {
     display: inline-block;
     background-color: #FF1493; /* Rosa Choque */
     color: white;
-    padding: 12px 30px;
+    padding: 14px 35px;
     text-decoration: none;
-    border-radius: 25px;
+    border-radius: 50px; /* Botão bem arredondado, estilo fofo */
     font-weight: bold;
-    box-shadow: 0 4px 15px rgba(255, 20, 147, 0.3);
+    box-shadow: 0 4px 15px rgba(255, 20, 147, 0.4);
     transition: 0.3s;
 }
 
 .btn-principal:hover {
     background-color: #D0107A;
-    transform: translateY(-2px);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 20, 147, 0.6);
 }
 
 /* GALERIA DE PRODUTOS */
 #galeria {
-    padding: 60px 5%;
+    padding: 80px 5%;
     text-align: center;
 }
 
 #galeria h2 {
+    font-family: 'Pacifico', cursive;
+    font-size: 32px;
     color: #8A2BE2; /* Violeta */
+    margin-bottom: 35px;
+}
+
+.subtitulo-secao {
+    font-size: 15px;
+    color: #666;
+    margin-top: -25px;
     margin-bottom: 40px;
 }
 
 .galeria-container {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 30px;
     flex-wrap: wrap;
 }
 
 .produto-card {
     background-color: white;
-    border: 2px solid #F8F4FF; /* Borda bem suave lilás */
-    border-radius: 15px;
-    padding: 15px;
-    width: 280px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border: 1px solid #E6E6FA;
+    border-radius: 20px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 8px 20px rgba(138, 43, 226, 0.05);
+    transition: 0.3s;
 }
 
-.produto-card img {
+.produto-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(138, 43, 226, 0.12);
+}
+
+.imagem-wrapper {
     width: 100%;
-    border-radius: 10px;
+    height: 220px;
+    overflow: hidden;
+    border-radius: 15px;
     margin-bottom: 15px;
+}
+
+.imagem-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .produto-card h3 {
     font-size: 18px;
     color: #4A154B;
+    margin-bottom: 8px;
+}
+
+.produto-card p {
+    font-size: 14px;
+    color: #777;
+    line-height: 1.5;
+}
+
+/* SEÇÃO SOBRE MIM */
+.sobre-secao {
+    background-color: #FFFFFF;
+    padding: 80px 5%;
+    display: flex;
+    justify-content: center;
+}
+
+.sobre-container {
+    max-width: 800px;
+    text-align: center;
+    background: linear-gradient(135deg, #FFF0F5 0%, #FFFFFF 100%);
+    padding: 50px 40px;
+    border-radius: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+    border-top: 4px solid #FF1493;
+    border-bottom: 4px solid #8A2BE2;
+}
+
+.sobre-texto h2 {
+    font-family: 'Pacifico', cursive;
+    font-size: 32px;
+    color: #FF1493;
+    margin-bottom: 5px;
+}
+
+.sobre-texto h3 {
+    font-size: 18px;
+    color: #8A2BE2;
+    margin-bottom: 25px;
+    font-weight: 400;
+}
+
+.sobre-texto p {
+    margin-bottom: 20px;
+    line-height: 1.7;
+    font-size: 16px;
+    color: #4A154B;
+}
+
+.btn-secundario {
+    display: inline-block;
+    margin-top: 10px;
+    background-color: transparent;
+    color: #8A2BE2;
+    border: 2px solid #8A2BE2;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-secundario:hover {
+    background-color: #8A2BE2;
+    color: white;
 }
 
 /* FORMULÁRIO DE ENCOMENDA */
 #encomendas {
     background-color: #FFFFFF;
-    padding: 60px 5%;
+    padding: 50px 40px;
     max-width: 600px;
-    margin: 40px auto;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(138, 43, 226, 0.1);
-    border: 2px solid #E6E6FA;
+    margin: 60px auto;
+    border-radius: 25px;
+    box-shadow: 0 15px 40px rgba(138, 43, 226, 0.08);
+    border: 1px solid #E6E6FA;
 }
 
 #encomendas h2 {
+    font-family: 'Pacifico', cursive;
+    font-size: 32px;
     text-align: center;
     color: #FF1493;
-    margin-bottom: 25px;
+    margin-bottom: 10px;
+}
+
+.form-ajuda {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 14px;
+    color: #666;
 }
 
 #form-encomenda {
@@ -149,58 +258,76 @@ nav ul li a:hover {
 #form-encomenda label {
     margin-bottom: 8px;
     font-weight: 600;
+    font-size: 14px;
+    color: #4A154B;
 }
 
 #form-encomenda input, #form-encomenda textarea {
-    padding: 12px;
-    margin-bottom: 20px;
-    border: 1px solid #DDA0DD; /* Ameixa/Lilás */
-    border-radius: 8px;
+    padding: 14px;
+    margin-bottom: 25px;
+    border: 1px solid #DDA0DD;
+    border-radius: 12px;
     background-color: #FFF0F5;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    transition: 0.3s;
 }
 
 #form-encomenda input:focus, #form-encomenda textarea:focus {
     outline: none;
     border-color: #FF1493;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 8px rgba(255, 20, 147, 0.2);
 }
 
 .btn-enviar {
     background-color: #8A2BE2; /* Violeta */
     color: white;
-    padding: 15px;
+    padding: 16px;
     border: none;
-    border-radius: 8px;
+    border-radius: 12px;
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
+    box-shadow: 0 4px 15px rgba(138, 43, 226, 0.3);
     transition: 0.3s;
 }
 
 .btn-enviar:hover {
     background-color: #7119D0;
+    transform: translateY(-2px);
 }
 
 /* RODAPÉ */
 footer {
-    background-color: #4A154B; /* Roxo Escuro */
+    background-color: #4A154B; /* Roxo ultra escuro */
     color: white;
     text-align: center;
     padding: 40px 5%;
-    margin-top: 60px;
+}
+
+.redes-sociais {
+    margin-bottom: 15px;
 }
 
 .redes-sociais a {
-    color: #FF1493; /* Rosa Choque ganha destaque no fundo roxo */
-    font-size: 20px;
+    color: #FF1493;
+    font-size: 22px;
     text-decoration: none;
     font-weight: bold;
+    font-family: 'Pacifico', cursive;
+    transition: 0.3s;
+}
+
+.redes-sociais a:hover {
+    color: #FFE4E1;
 }
 
 /* BOTÃO FLUTUANTE DO WHATSAPP */
 .whatsapp-flutuante {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 25px;
+    right: 25px;
     background-color: #25D366;
     color: white;
     width: 60px;
@@ -209,95 +336,13 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 30px;
-    box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+    font-size: 32px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
     z-index: 1000;
     text-decoration: none;
-}
-/* ESTILOS EXTRAS ADICIONADOS */
-.subtitulo-secao {
-    font-size: 16px;
-    color: #8A2BE2;
-    margin-top: -30px;
-    margin-bottom: 40px;
-}
-
-.imagem-wrapper {
-    width: 100%;
-    height: 200px;
-    overflow: hidden;
-    border-radius: 10px;
-    margin-bottom: 15px;
-}
-
-.imagem-wrapper img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Faz as fotos temporárias ficarem certinhas sem achatar */
-}
-
-.produto-card p {
-    font-size: 14px;
-    color: #666;
-    margin-top: 5px;
-}
-
-/* SEÇÃO SOBRE MIM */
-.sobre-secao {
-    background: linear-gradient(135deg, #FFFFFF 0%, #FFF0F5 100%);
-    padding: 60px 5%;
-    display: flex;
-    justify-content: center;
-}
-
-.sobre-container {
-    max-width: 800px;
-    text-align: center;
-    background-color: white;
-    padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.02);
-    border-left: 5px solid #FF1493; /* Detalhe lateral rosa choque */
-}
-
-.sobre-texto h2 {
-    color: #FF1493;
-    margin-bottom: 10px;
-}
-
-.sobre-texto h3 {
-    color: #8A2BE2;
-    margin-bottom: 20px;
-}
-
-.sobre-texto p {
-    margin-bottom: 15px;
-    line-height: 1.6;
-    font-size: 16px;
-}
-
-.btn-secundario {
-    display: inline-block;
-    margin-top: 15px;
-    background-color: transparent;
-    color: #8A2BE2;
-    border: 2px solid #8A2BE2;
-    padding: 10px 25px;
-    text-decoration: none;
-    border-radius: 25px;
-    font-weight: bold;
     transition: 0.3s;
 }
 
-.btn-secundario:hover {
-    background-color: #8A2BE2;
-    color: white;
-}
-
-.form-ajuda {
-    text-align: center;
-    margin-top: -15px;
-    margin-bottom: 20px;
-    font-size: 14px;
-    color: #666;
+.whatsapp-flutuante:hover {
+    transform: scale(1.1);
 }
