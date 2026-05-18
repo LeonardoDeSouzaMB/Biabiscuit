@@ -1,0 +1,24 @@
+document.getElementById('form-encomenda').addEventListener('submit', function(event) {
+    event.preventDefault(); // Impede a página de recarregar
+
+    // Pega os dados digitados pelo cliente
+    const nome = document.getElementById('nome').value;
+    const instagram = document.getElementById('instagram-cliente').value;
+    const detalhes = document.getElementById('detalhes').value;
+
+    // Número de telefone da Bia (coloque o número com DDD aqui, ex: 5511999999999)
+    // Por enquanto vou deixar um modelo, depois você altera!
+    const numeroWhats = "5500000000000"; 
+
+    // Monta a mensagem bonita para o WhatsApp
+    const textoMensagem = `Olá Bia! Meu nome é ${nome} (Insta: ${instagram}). Gostaria de fazer uma encomenda de biscuit: ${detalhes}`;
+    
+    // Codifica o texto para o link do WhatsApp não quebrar
+    const mensagemFormatada = encodeURIComponent(textoMensagem);
+
+    // Cria o link definitivo do WhatsApp
+    const linkWhatsapp = `https://wa.me/${numeroWhats}?text=${mensagemFormatada}`;
+
+    // Abre o WhatsApp com a mensagem pronta
+    window.open(linkWhatsapp, '_blank');
+});

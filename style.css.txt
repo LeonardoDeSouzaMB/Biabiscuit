@@ -1,0 +1,216 @@
+/* CONFIGURAÇÕES GERAIS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #FFF0F5; /* LavenderBlush - um rosa bebê bem clarinho de fundo */
+    color: #4A154B; /* Roxo escuro para os textos ficarem fáceis de ler */
+}
+
+/* MENU DE NAVEGAÇÃO */
+header {
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    border-bottom: 3px solid #FF1493; /* Linha Rosa Choque */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #FF1493; /* Rosa Choque */
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #8A2BE2; /* Violeta */
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #FF1493; /* Muda para rosa choque ao passar o mouse */
+}
+
+/* SEÇÃO PRINCIPAL (HERO) */
+.hero {
+    background: linear-gradient(135deg, #FFE4E1 0%, #E6E6FA 100%); /* Degradê Rosa Bebê com Lilás */
+    padding: 80px 5%;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 36px;
+    color: #FF1493;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+/* BOTÕES */
+.btn-principal {
+    display: inline-block;
+    background-color: #FF1493; /* Rosa Choque */
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(255, 20, 147, 0.3);
+    transition: 0.3s;
+}
+
+.btn-principal:hover {
+    background-color: #D0107A;
+    transform: translateY(-2px);
+}
+
+/* GALERIA DE PRODUTOS */
+#galeria {
+    padding: 60px 5%;
+    text-align: center;
+}
+
+#galeria h2 {
+    color: #8A2BE2; /* Violeta */
+    margin-bottom: 40px;
+}
+
+.galeria-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.produto-card {
+    background-color: white;
+    border: 2px solid #F8F4FF; /* Borda bem suave lilás */
+    border-radius: 15px;
+    padding: 15px;
+    width: 280px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.produto-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.produto-card h3 {
+    font-size: 18px;
+    color: #4A154B;
+}
+
+/* FORMULÁRIO DE ENCOMENDA */
+#encomendas {
+    background-color: #FFFFFF;
+    padding: 60px 5%;
+    max-width: 600px;
+    margin: 40px auto;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(138, 43, 226, 0.1);
+    border: 2px solid #E6E6FA;
+}
+
+#encomendas h2 {
+    text-align: center;
+    color: #FF1493;
+    margin-bottom: 25px;
+}
+
+#form-encomenda {
+    display: flex;
+    flex-direction: column;
+}
+
+#form-encomenda label {
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+#form-encomenda input, #form-encomenda textarea {
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #DDA0DD; /* Ameixa/Lilás */
+    border-radius: 8px;
+    background-color: #FFF0F5;
+}
+
+#form-encomenda input:focus, #form-encomenda textarea:focus {
+    outline: none;
+    border-color: #FF1493;
+}
+
+.btn-enviar {
+    background-color: #8A2BE2; /* Violeta */
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-enviar:hover {
+    background-color: #7119D0;
+}
+
+/* RODAPÉ */
+footer {
+    background-color: #4A154B; /* Roxo Escuro */
+    color: white;
+    text-align: center;
+    padding: 40px 5%;
+    margin-top: 60px;
+}
+
+.redes-sociais a {
+    color: #FF1493; /* Rosa Choque ganha destaque no fundo roxo */
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* BOTÃO FLUTUANTE DO WHATSAPP */
+.whatsapp-flutuante {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+    z-index: 1000;
+    text-decoration: none;
+}

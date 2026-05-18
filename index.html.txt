@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bia Biscuit - Arte em Modelagem</title>
+    <!-- Link para o arquivo de estilo (CSS) -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Ícones do FontAwesome para as redes sociais -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- CABEÇALHO E MENU DE NAVEGAÇÃO -->
+    <header>
+        <div class="logo">Bia Biscuit</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#galeria">Trabalhos</a></li>
+                <li><a href="#encomendas">Encomendar</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- SEÇÃO HOME (INÍCIO) -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Eternizando momentos em forma de biscuit</h1>
+            <p>Peças exclusivas, humanizadas e feitas com muito amor para o seu evento.</p>
+            <a href="#encomendas" class="btn-principal">Fazer Encomenda</a>
+        </div>
+    </section>
+
+    <!-- SEÇÃO GALERIA (FOTOS DOS PRODUTOS) -->
+    <section id="galeria">
+        <h2>Meus Trabalhos</h2>
+        <div class="galeria-container">
+            <!-- Os blocos de fotos vão entrar aqui -->
+            <div class="produto-card">
+                <img src="https://via.placeholder.com/300" alt="Produto Exemplo">
+                <h3>Topo de Bolo Noivos</h3>
+            </div>
+            <div class="produto-card">
+                <img src="https://via.placeholder.com/300" alt="Produto Exemplo">
+                <h3>Lembrancinha Maternidade</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO DE ENCOMENDAS (FORMULÁRIO) -->
+    <section id="encomendas">
+        <h2>Faça sua Encomenda</h2>
+        <form id="form-encomenda">
+            <label for="nome">Seu Nome:</label>
+            <input type="text" id="nome" required placeholder="Digite seu nome">
+
+            <label for="instagram-cliente">Seu Instagram:</label>
+            <input type="text" id="instagram-cliente" placeholder="@seu.perfil">
+
+            <label for="detalhes">Detalhes do Pedido:</label>
+            <textarea id="detalhes" required placeholder="Ex: Topo de bolo de casamento com cachorrinho..."></textarea>
+
+            <button type="submit" class="btn-enviar">Enviar Pedido via WhatsApp</button>
+        </form>
+    </section>
+
+    <!-- RODAPÉ E CONTATOS -->
+    <footer>
+        <div class="contato-info" id="contato">
+            <h3>Siga a Bia Biscuit</h3>
+            <div class="redes-sociais">
+                <!-- Substitua o link depois pelo Insta real da Bia -->
+                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i> @biabiscuit</a>
+            </div>
+            <p>© 2026 Bia Biscuit. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Botão Flutuante do WhatsApp -->
+    <a href="https://wa.me/SEUNUMERO" class="whatsapp-flutuante" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Link para o arquivo de funções (JavaScript) -->
+    <script src="script.js"></script>
+</body>
+</html>
