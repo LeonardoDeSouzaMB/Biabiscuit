@@ -1,8 +1,20 @@
+/* IMPORTANDO FONTES DO GOOGLE */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600;700&display=swap');
+
+/* CONFIGURAÇÕES GERAIS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
 body {
-    /* Cria um fundo único, liso e suave que vai do Rosa Bebê bem clarinho ao Lilás nas pontas */
-    background: linear-gradient(135deg, #FFF0F5 0%, #FFE4E1 50%, #E6E6FA 100%);
-    background-size: cover;
-    background-attachment: fixed; /* Mantém o fundo estático e elegante enquanto o cliente navega */
+    /* FUNDO ÚNICO E LISO (SEM IMAGENS DE TIJOLO) */
+    background: linear-gradient(135deg, #FFF0F5 0%, #FFE4E1 50%, #E6E6FA 100%) !important;
+    background-size: cover !important;
+    background-attachment: fixed !important;
+    background-image: none !important; /* Força o navegador a esquecer a imagem antiga */
     color: #4A154B; 
     scroll-behavior: smooth; 
 }
@@ -14,7 +26,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 15px 5%;
-    border-bottom: 3px solid #FF1493; /* Detalhe em Rosa Choque */
+    border-bottom: 3px solid #FF1493;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -22,9 +34,9 @@ header {
 }
 
 .logo {
-    font-family: 'Pacifico', cursive; /* Letra em formato de desenho/biscuit */
+    font-family: 'Pacifico', cursive;
     font-size: 28px;
-    color: #FF1493; /* Rosa Choque */
+    color: #FF1493;
     text-shadow: 1px 1px 2px rgba(138, 43, 226, 0.2);
 }
 
@@ -39,19 +51,19 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #8A2BE2; /* Violeta */
+    color: #8A2BE2;
     font-weight: 600;
     font-size: 15px;
     transition: 0.3s;
 }
 
 nav ul li a:hover {
-    color: #FF1493; /* Muda para rosa choque no mouse */
+    color: #FF1493;
 }
 
 /* SEÇÃO PRINCIPAL (HERO) */
 .hero {
-    background: linear-gradient(135deg, #FFE4E1 0%, #E6E6FA 100%); /* Degradê suave rosa e lilás */
+    background: linear-gradient(135deg, #FFE4E1 0%, #E6E6FA 100%);
     padding: 100px 5%;
     text-align: center;
 }
@@ -74,11 +86,11 @@ nav ul li a:hover {
 /* BOTÕES */
 .btn-principal {
     display: inline-block;
-    background-color: #FF1493; /* Rosa Choque */
+    background-color: #FF1493;
     color: white;
     padding: 14px 35px;
     text-decoration: none;
-    border-radius: 50px; /* Botão bem arredondado, estilo fofo */
+    border-radius: 50px;
     font-weight: bold;
     box-shadow: 0 4px 15px rgba(255, 20, 147, 0.4);
     transition: 0.3s;
@@ -99,7 +111,7 @@ nav ul li a:hover {
 #galeria h2 {
     font-family: 'Pacifico', cursive;
     font-size: 32px;
-    color: #8A2BE2; /* Violeta */
+    color: #8A2BE2;
     margin-bottom: 35px;
 }
 
@@ -273,7 +285,7 @@ nav ul li a:hover {
 }
 
 .btn-enviar {
-    background-color: #8A2BE2; /* Violeta */
+    background-color: #8A2BE2;
     color: white;
     padding: 16px;
     border: none;
@@ -292,7 +304,7 @@ nav ul li a:hover {
 
 /* RODAPÉ */
 footer {
-    background-color: #4A154B; /* Roxo ultra escuro */
+    background-color: #4A154B;
     color: white;
     text-align: center;
     padding: 40px 5%;
@@ -309,10 +321,6 @@ footer {
     font-weight: bold;
     font-family: 'Pacifico', cursive;
     transition: 0.3s;
-}
-
-.redes-sociais a:hover {
-    color: #FFE4E1;
 }
 
 /* BOTÃO FLUTUANTE DO WHATSAPP */
@@ -337,21 +345,4 @@ footer {
 
 .whatsapp-flutuante:hover {
     transform: scale(1.1);
-}
-/* NOVO FUNDO ANIMADO E FLUIDO */
-body {
-    background-image: url('fundo-biscuit-fluido.png'); /* Caminho para a nova imagem */
-    background-size: cover; /* A imagem cobre todo o fundo */
-    background-attachment: fixed; /* O fundo permanece fixo enquanto você rola */
-    animation: moveBackgroundFluido 180s linear infinite; /* Animação mais suave */
-}
-
-/* NOVA ANIMAÇÃO DO FUNDO FLUIDO */
-@keyframes moveBackgroundFluido {
-    from {
-        background-position: 0 0;
-    }
-    to {
-        background-position: 100% 100%; /* A animação flui por todo o fundo */
-    }
 }
