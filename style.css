@@ -1,41 +1,10 @@
 body {
-    background-image: url('https://lh3.googleusercontent.com/d/1B3w7U6l0X8A3y4u5v6w7x8y9z0_12345=w1000'); /* Puxa a imagem delicada da internet */
-    background-size: 250px; /* Deixa os desenhinhos pequenos e fofos, sem poluir o site */
-    background-attachment: fixed; /* O fundo fica parado enquanto o cliente rola a página, dando elegância */
+    /* Cria um fundo único, liso e suave que vai do Rosa Bebê bem clarinho ao Lilás nas pontas */
+    background: linear-gradient(135deg, #FFF0F5 0%, #FFE4E1 50%, #E6E6FA 100%);
+    background-size: cover;
+    background-attachment: fixed; /* Mantém o fundo estático e elegante enquanto o cliente navega */
     color: #4A154B; 
     scroll-behavior: smooth; 
-    animation: moverFundoSuave 90s linear infinite; /* Faz os desenhinhos se moverem bem devagar */
-}
-
-/* Animação para o fundo andar de lado bem de leve */
-@keyframes moverFundoSuave {
-    from { background-position: 0 0; }
-    to { background-position: 250px 250px; }
-}
-
-/* DEFINIÇÃO DA ANIMAÇÃO DO FUNDO */
-@keyframes moveBackground {
-    from {
-        background-position: 0 0; /* Posição inicial */
-    }
-    to {
-        background-position: 400px 400px; /* Posição final (mesmo tamanho que background-size) */
-    }
-}/* IMPORTANDO FONTES DO GOOGLE */
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600;700&display=swap');
-
-/* CONFIGURAÇÕES GERAIS */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif; /* Letra principal super moderna e limpa */
-}
-
-body {
-    background-color: #FFF0F5; /* Rosa bebê de fundo bem sutil */
-    color: #4A154B; /* Roxo escuro para excelente leitura */
-    scroll-behavior: smooth; /* Efeito de deslizar suave ao clicar no menu */
 }
 
 /* MENU DE NAVEGAÇÃO */
