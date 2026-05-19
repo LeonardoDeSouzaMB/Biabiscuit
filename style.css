@@ -1,7 +1,5 @@
-/* IMPORTANDO FONTES DO GOOGLE */
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Poppins:wght@300;400;600;700&display=swap');
 
-/* CONFIGURAÇÕES GERAIS */
 * {
     margin: 0;
     padding: 0;
@@ -10,13 +8,23 @@
 }
 
 body {
-    /* FUNDO ÚNICO E LISO (SEM IMAGENS DE TIJOLO) */
     background: linear-gradient(135deg, #FFF0F5 0%, #FFE4E1 50%, #E6E6FA 100%) !important;
     background-size: cover !important;
     background-attachment: fixed !important;
-    background-image: none !important; /* Força o navegador a esquecer a imagem antiga */
+    background-image: none !important;
     color: #4A154B; 
     scroll-behavior: smooth; 
+}
+
+/* BANNER DE AVISO */
+.banner-aviso {
+    background-color: #FF1493;
+    color: white;
+    text-align: center;
+    padding: 8px 5%;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
 }
 
 /* MENU DE NAVEGAÇÃO */
@@ -34,26 +42,27 @@ header {
 }
 
 .logo {
-    font-family: 'Pacifico', cursive;
-    font-size: 28px;
+    font-family: 'Comfortaa', cursive;
+    font-weight: 700;
+    font-size: 26px;
     color: #FF1493;
-    text-shadow: 1px 1px 2px rgba(138, 43, 226, 0.2);
 }
 
 nav ul {
     display: flex;
     list-style: none;
+    align-items: center;
 }
 
 nav ul li {
-    margin-left: 25px;
+    margin-left: 20px;
 }
 
 nav ul li a {
     text-decoration: none;
     color: #8A2BE2;
     font-weight: 600;
-    font-size: 15px;
+    font-size: 14px;
     transition: 0.3s;
 }
 
@@ -61,26 +70,40 @@ nav ul li a:hover {
     color: #FF1493;
 }
 
-/* SEÇÃO PRINCIPAL (HERO) */
+.menu-btn {
+    background-color: #FF1493;
+    color: white !important;
+    padding: 8px 18px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(255, 20, 147, 0.2);
+}
+
+.menu-btn:hover {
+    background-color: #D0107A;
+}
+
+/* HERO (INÍCIO) */
 .hero {
-    background: linear-gradient(135deg, #FFE4E1 0%, #E6E6FA 100%);
-    padding: 100px 5%;
+    background: linear-gradient(135deg, rgba(255, 228, 225, 0.6) 0%, rgba(230, 230, 250, 0.6) 100%);
+    padding: 120px 5%;
     text-align: center;
 }
 
 .hero h1 {
-    font-family: 'Pacifico', cursive;
-    font-size: 42px;
+    font-family: 'Comfortaa', cursive;
+    font-size: 44px;
     color: #FF1493;
     margin-bottom: 20px;
-    line-height: 1.4;
+    line-height: 1.3;
 }
 
 .hero p {
-    font-size: 18px;
-    margin-bottom: 30px;
-    color: #555;
-    font-weight: 300;
+    font-size: 17px;
+    margin-bottom: 35px;
+    color: #4A154B;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* BOTÕES */
@@ -88,7 +111,7 @@ nav ul li a:hover {
     display: inline-block;
     background-color: #FF1493;
     color: white;
-    padding: 14px 35px;
+    padding: 15px 40px;
     text-decoration: none;
     border-radius: 50px;
     font-weight: bold;
@@ -99,49 +122,46 @@ nav ul li a:hover {
 .btn-principal:hover {
     background-color: #D0107A;
     transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(255, 20, 147, 0.6);
 }
 
-/* GALERIA DE PRODUTOS */
-#galeria {
+/* GALERIA / PRODUTOS */
+#galeria, .como-funciona-secao, .depoimentos-secao {
     padding: 80px 5%;
     text-align: center;
 }
 
-#galeria h2 {
-    font-family: 'Pacifico', cursive;
+h2 {
+    font-family: 'Comfortaa', cursive;
     font-size: 32px;
     color: #8A2BE2;
-    margin-bottom: 35px;
+    margin-bottom: 15px;
 }
 
-.subtitulo-secao {
+.subtitulo-secao, .form-ajuda {
     font-size: 15px;
     color: #666;
-    margin-top: -25px;
-    margin-bottom: 40px;
+    margin-bottom: 45px;
 }
 
 .galeria-container {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 25px;
     flex-wrap: wrap;
 }
 
 .produto-card {
     background-color: white;
-    border: 1px solid #E6E6FA;
     border-radius: 20px;
     padding: 20px;
-    width: 300px;
-    box-shadow: 0 8px 20px rgba(138, 43, 226, 0.05);
+    width: 290px;
+    box-shadow: 0 8px 25px rgba(138, 43, 226, 0.04);
     transition: 0.3s;
 }
 
 .produto-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 12px 25px rgba(138, 43, 226, 0.12);
+    box-shadow: 0 12px 30px rgba(138, 43, 226, 0.1);
 }
 
 .imagem-wrapper {
@@ -156,23 +176,67 @@ nav ul li a:hover {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: 0.5s ease; /* Transição para o efeito de zoom */
+}
+
+.produto-card:hover .imagem-wrapper img {
+    transform: scale(1.08); /* Efeito de Zoom Suave na foto */
 }
 
 .produto-card h3 {
     font-size: 18px;
-    color: #4A154B;
-    margin-bottom: 8px;
+    color: #FF1493;
+    margin-bottom: 10px;
 }
 
 .produto-card p {
-    font-size: 14px;
-    color: #777;
+    font-size: 13.5px;
+    color: #666;
     line-height: 1.5;
 }
 
-/* SEÇÃO SOBRE MIM */
+/* COMO FUNCIONA */
+.como-funciona-secao {
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+.passos-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.passo-card {
+    background: white;
+    padding: 30px 20px;
+    border-radius: 20px;
+    width: 280px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.02);
+}
+
+.passo-icone {
+    font-size: 35px;
+    color: #FF1493;
+    margin-bottom: 15px;
+}
+
+.passo-card h3 {
+    font-size: 17px;
+    margin-bottom: 10px;
+    color: #8A2BE2;
+}
+
+.passo-card p {
+    font-size: 13.5px;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* SOBRE MIM */
 .sobre-secao {
-    background-color: #FFFFFF;
     padding: 80px 5%;
     display: flex;
     justify-content: center;
@@ -181,42 +245,32 @@ nav ul li a:hover {
 .sobre-container {
     max-width: 800px;
     text-align: center;
-    background: linear-gradient(135deg, #FFF0F5 0%, #FFFFFF 100%);
+    background: white;
     padding: 50px 40px;
     border-radius: 30px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.02);
     border-top: 4px solid #FF1493;
-    border-bottom: 4px solid #8A2BE2;
-}
-
-.sobre-texto h2 {
-    font-family: 'Pacifico', cursive;
-    font-size: 32px;
-    color: #FF1493;
-    margin-bottom: 5px;
 }
 
 .sobre-texto h3 {
-    font-size: 18px;
     color: #8A2BE2;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     font-weight: 400;
 }
 
 .sobre-texto p {
     margin-bottom: 20px;
     line-height: 1.7;
-    font-size: 16px;
-    color: #4A154B;
+    font-size: 15.5px;
+    color: #555;
 }
 
 .btn-secundario {
     display: inline-block;
-    margin-top: 10px;
     background-color: transparent;
     color: #8A2BE2;
     border: 2px solid #8A2BE2;
-    padding: 12px 30px;
+    padding: 10px 30px;
     text-decoration: none;
     border-radius: 50px;
     font-weight: bold;
@@ -228,6 +282,49 @@ nav ul li a:hover {
     color: white;
 }
 
+/* DEPOIMENTOS */
+.depoimentos-secao {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.depoimentos-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.depoimento-card {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    width: 380px;
+    text-align: left;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.02);
+    border-left: 4px solid #8A2BE2;
+}
+
+.estrelas {
+    color: #FFD700;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.depoimento-card p {
+    font-style: italic;
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.depoimento-card h4 {
+    color: #4A154B;
+    font-size: 14px;
+}
+
 /* FORMULÁRIO DE ENCOMENDA */
 #encomendas {
     background-color: #FFFFFF;
@@ -235,23 +332,18 @@ nav ul li a:hover {
     max-width: 600px;
     margin: 60px auto;
     border-radius: 25px;
-    box-shadow: 0 15px 40px rgba(138, 43, 226, 0.08);
+    box-shadow: 0 15px 40px rgba(138, 43, 226, 0.05);
     border: 1px solid #E6E6FA;
 }
 
 #encomendas h2 {
-    font-family: 'Pacifico', cursive;
-    font-size: 32px;
-    text-align: center;
     color: #FF1493;
-    margin-bottom: 10px;
+    text-align: center;
 }
 
 .form-ajuda {
     text-align: center;
     margin-bottom: 30px;
-    font-size: 14px;
-    color: #666;
 }
 
 #form-encomenda {
@@ -262,8 +354,7 @@ nav ul li a:hover {
 #form-encomenda label {
     margin-bottom: 8px;
     font-weight: 600;
-    font-size: 14px;
-    color: #4A154B;
+    font-size: 13.5px;
 }
 
 #form-encomenda input, #form-encomenda textarea {
@@ -272,7 +363,6 @@ nav ul li a:hover {
     border: 1px solid #DDA0DD;
     border-radius: 12px;
     background-color: #FFF0F5;
-    font-family: 'Poppins', sans-serif;
     font-size: 14px;
     transition: 0.3s;
 }
@@ -281,11 +371,10 @@ nav ul li a:hover {
     outline: none;
     border-color: #FF1493;
     background-color: #FFFFFF;
-    box-shadow: 0 0 8px rgba(255, 20, 147, 0.2);
 }
 
 .btn-enviar {
-    background-color: #8A2BE2;
+    background-color: #25D366; /* Botão de envio virou Verde-WhatsApp para chamar atenção */
     color: white;
     padding: 16px;
     border: none;
@@ -293,12 +382,12 @@ nav ul li a:hover {
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
-    box-shadow: 0 4px 15px rgba(138, 43, 226, 0.3);
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
     transition: 0.3s;
 }
 
 .btn-enviar:hover {
-    background-color: #7119D0;
+    background-color: #1ebd58;
     transform: translateY(-2px);
 }
 
@@ -310,17 +399,11 @@ footer {
     padding: 40px 5%;
 }
 
-.redes-sociais {
-    margin-bottom: 15px;
-}
-
 .redes-sociais a {
     color: #FF1493;
-    font-size: 22px;
+    font-size: 20px;
     text-decoration: none;
     font-weight: bold;
-    font-family: 'Pacifico', cursive;
-    transition: 0.3s;
 }
 
 /* BOTÃO FLUTUANTE DO WHATSAPP */
@@ -345,4 +428,25 @@ footer {
 
 .whatsapp-flutuante:hover {
     transform: scale(1.1);
+}
+
+/* ADAPTAÇÕES PARA CELULAR */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+    nav ul li {
+        margin-left: 0;
+        margin: 0 10px;
+    }
+    .hero h1 {
+        font-size: 32px;
+    }
 }
