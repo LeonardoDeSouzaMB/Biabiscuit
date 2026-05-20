@@ -34,7 +34,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 8%; /* Ajuste para dar mais espaço vertical */
+    padding: 10px 8%;
     border-bottom: 2px solid rgba(255, 20, 147, 0.15);
     position: sticky;
     top: 0;
@@ -42,7 +42,7 @@ header {
     box-shadow: 0 4px 20px rgba(74, 21, 75, 0.04);
 }
 
-/* AJUSTE DO NOVO LOGO COM MASCOTE - AGORA MAIOR */
+/* AJUSTE DO NOVO LOGO COM MASCOTE */
 .logo-link {
     display: flex;
     align-items: center;
@@ -50,7 +50,7 @@ header {
 }
 
 .logo-imagem {
-    height: 120px; /* Aumentei de 75px para 120px */
+    height: 120px;
     width: auto;
     transition: transform 0.3s ease;
 }
@@ -95,9 +95,9 @@ nav ul li a:hover {
     transform: translateY(-2px);
 }
 
-/* HERO (SEÇÃO PRINCIPAL) */
+/* HERO */
 .hero {
-    padding: 160px 5% 100px 5%; /* Ajuste de padding devido à logo maior */
+    padding: 160px 5% 100px 5%;
     text-align: center;
 }
 
@@ -120,7 +120,6 @@ nav ul li a:hover {
     font-weight: 600;
 }
 
-/* BOTÃO PRINCIPAL ARREDONDADO */
 .btn-principal {
     display: inline-block;
     background-color: #FF1493;
@@ -137,10 +136,9 @@ nav ul li a:hover {
 .btn-principal:hover {
     background-color: #D0107A;
     transform: translateY(-4px);
-    box-shadow: 0 12px 30px rgba(255, 20, 147, 0.45);
 }
 
-/* SEÇÕES CONFIGURAÇÃO */
+/* CONFIGURAÇÃO DAS SEÇÕES */
 #galeria, .como-funciona-secao, .depoimentos-secao {
     padding: 100px 8%;
     text-align: center;
@@ -154,7 +152,7 @@ h2 {
     margin-bottom: 15px;
 }
 
-.subtitulo-secao {
+.subtitulo-secao, .form-ajuda {
     font-size: 16px;
     color: #7a4b7d;
     margin-bottom: 60px;
@@ -176,7 +174,6 @@ h2 {
     width: 310px;
     box-shadow: 0 10px 30px rgba(74, 21, 75, 0.03);
     border: 1px solid rgba(230, 230, 250, 0.7);
-    transition: all 0.4s ease;
 }
 
 .imagem-wrapper {
@@ -234,6 +231,14 @@ h2 {
     margin-bottom: 20px;
 }
 
+.passo-card h3 {
+    font-family: 'Comfortaa', cursive;
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 12px;
+    color: #8A2BE2;
+}
+
 /* SOBRE MIM */
 .sobre-secao {
     padding: 100px 5%;
@@ -249,7 +254,30 @@ h2 {
     border-radius: 32px;
 }
 
+.sobre-texto p {
+    margin-bottom: 25px;
+    line-height: 1.8;
+    font-size: 16.5px;
+    color: #555;
+    font-weight: 500;
+}
+
+.btn-secundario {
+    display: inline-block;
+    background-color: transparent;
+    color: #8A2BE2;
+    border: 2px solid #8A2BE2;
+    padding: 12px 35px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 700;
+}
+
 /* DEPOIMENTOS */
+.depoimentos-secao {
+    background-color: rgba(255, 255, 255, 0.35);
+}
+
 .depoimentos-container {
     display: flex;
     justify-content: center;
@@ -266,6 +294,27 @@ h2 {
     width: 450px;
 }
 
+.depoimento-perfil {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 20px;
+}
+
+.foto-cliente {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #FFF0F5;
+}
+
+.estrelas {
+    color: #FFD700;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
 /* CENTRAL DE ENCOMENDAS */
 #encomendas {
     background-color: #FFFFFF;
@@ -273,35 +322,123 @@ h2 {
     max-width: 650px;
     margin: 80px auto;
     border-radius: 28px;
+    box-shadow: 0 20px 50px rgba(74, 21, 75, 0.05);
+    border: 1px solid rgba(230, 230, 250, 0.8);
 }
 
-.form-central input, .form-central textarea {
+.Abas-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.aba-btn {
+    background-color: #FFF0F5;
+    border: 2px solid #DDA0DD;
+    color: #8A2BE2;
+    padding: 12px 20px;
+    border-radius: 30px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 14px;
+}
+
+.aba-btn.ativa {
+    background-color: #FF1493;
+    border-color: #FF1493;
+    color: white;
+}
+
+.form-central {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.form-central label {
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 14px;
+    color: #4A154B;
+}
+
+.form-central input, .form-central textarea, .form-central select {
     padding: 16px;
     margin-bottom: 25px;
     border: 1px solid rgba(221, 160, 221, 0.6);
     border-radius: 16px;
     background-color: #FFF0F5;
+    font-size: 14.5px;
+    font-weight: 500;
     width: 100%;
+    font-family: 'Quicksand', sans-serif;
 }
 
-.aba-btn {
-    padding: 12px 20px;
-    border-radius: 30px;
+.form-central input:focus, .form-central textarea:focus, .form-central select:focus {
+    outline: none;
+    border-color: #FF1493;
+    background-color: #FFFFFF;
+}
+
+/* CAIXA DE RESULTADO DO FRETE */
+.caixa-resultado-frete {
+    background-color: #E6F4EA;
+    border: 2px dashed #25D366;
+    padding: 20px;
+    border-radius: 16px;
+    margin-bottom: 25px;
+    text-align: center;
+    color: #137333;
+}
+
+.caixa-resultado-frete p {
+    font-size: 18px;
+    margin-bottom: 5px;
 }
 
 .btn-enviar {
     background-color: #25D366;
     color: white;
     padding: 18px;
+    border: none;
     border-radius: 16px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
     width: 100%;
+}
+
+.btn-enviar-frete {
+    background-color: #008CBA;
+    color: white;
+    padding: 18px;
+    border: none;
+    border-radius: 16px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    width: 100%;
+}
+
+.escondido {
+    display: none !important;
 }
 
 /* RODAPÉ */
 footer {
     background-color: #4A154B;
     color: white;
+    text-align: center;
     padding: 50px 5%;
+}
+
+.redes-sociais a {
+    color: #FF1493;
+    font-size: 22px;
+    text-decoration: none;
+    font-weight: 700;
 }
 
 /* BOTÃO FLUTUANTE */
@@ -310,18 +447,25 @@ footer {
     bottom: 30px;
     right: 30px;
     background-color: #25D366;
-    border-radius: 50%;
+    color: white;
     width: 65px;
     height: 65px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 34px;
+    z-index: 1000;
+    text-decoration: none;
 }
 
 /* RESPONSIVIDADE */
 @media (max-width: 768px) {
     header {
         flex-direction: column;
-        padding: 20px 5%;
+        gap: 20px;
     }
     .hero {
-        padding: 200px 5% 100px 5%; /* Padding ainda maior no mobile */
+        padding: 200px 5% 100px 5%;
     }
 }
