@@ -6,7 +6,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Quicksand', sans-serif; /* Letra super moderna, arredondada e limpa */
+    font-family: 'Quicksand', sans-serif; /* Letra moderna, arredondada e limpa */
 }
 
 body {
@@ -35,7 +35,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 8%;
+    padding: 15px 8%;
     border-bottom: 2px solid rgba(255, 20, 147, 0.15);
     position: sticky;
     top: 0;
@@ -43,12 +43,21 @@ header {
     box-shadow: 0 4px 20px rgba(74, 21, 75, 0.04);
 }
 
-.logo {
-    font-family: 'Comfortaa', cursive;
-    font-weight: 700;
-    font-size: 28px;
-    color: #FF1493;
-    letter-spacing: -0.5px;
+/* AJUSTE DO NOVO LOGO COM MASCOTE */
+.logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo-imagem {
+    height: 75px; /* Altura perfeita para não desconfigurar o menu */
+    width: auto;  /* Mantém a proporção redondinha da imagem */
+    transition: transform 0.3s ease;
+}
+
+.logo-imagem:hover {
+    transform: scale(1.05); /* Leve zoom quando passa o mouse */
 }
 
 nav ul {
@@ -78,7 +87,7 @@ nav ul li a:hover {
     background-color: #FF1493;
     color: white !important;
     padding: 10px 22px;
-    border-radius: 30px; /* Cantos bem redondos estilo e-commerce */
+    border-radius: 30px;
     box-shadow: 0 6px 15px rgba(255, 20, 147, 0.2);
 }
 
@@ -163,10 +172,10 @@ h2 {
 
 .produto-card {
     background-color: #FFFFFF;
-    border-radius: 24px; /* Super arredondado igual ao site de exemplo */
+    border-radius: 24px;
     padding: 24px;
     width: 310px;
-    box-shadow: 0 10px 30px rgba(74, 21, 75, 0.03); /* Sombra suave profissional */
+    box-shadow: 0 10px 30px rgba(74, 21, 75, 0.03);
     border: 1px solid rgba(230, 230, 250, 0.7);
     transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
@@ -180,7 +189,7 @@ h2 {
     width: 100%;
     height: 240px;
     overflow: hidden;
-    border-radius: 18px; /* Cantos da foto também redondos */
+    border-radius: 18px;
     margin-bottom: 20px;
 }
 
@@ -334,7 +343,7 @@ h2 {
     margin-top: 5px;
 }
 
-/* FORMULÁRIO DE ENCOMENDA "LOJA PREMIUM" */
+/* DESIGN DA CENTRAL DE ENCOMENDAS - ABAS */
 #encomendas {
     background-color: #FFFFFF;
     padding: 60px 50px;
@@ -356,22 +365,62 @@ h2 {
     color: #4A154B;
 }
 
-#form-encomenda input, #form-encomenda textarea {
+#form-encomenda input, #form-encomenda textarea, .form-central input, .form-central textarea {
     padding: 16px;
     margin-bottom: 25px;
     border: 1px solid rgba(221, 160, 221, 0.6);
-    border-radius: 16px; /* Inputs super arredondados, estilo moderno */
+    border-radius: 16px;
     background-color: #FFF0F5;
     font-size: 14.5px;
     font-weight: 500;
     transition: all 0.3s ease;
+    width: 100%;
 }
 
-#form-encomenda input:focus, #form-encomenda textarea:focus {
+#form-encomenda input:focus, #form-encomenda textarea:focus, .form-central input:focus, .form-central textarea:focus {
     outline: none;
     border-color: #FF1493;
     background-color: #FFFFFF;
     box-shadow: 0 0 12px rgba(255, 20, 147, 0.15);
+}
+
+.Abas-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.aba-btn {
+    background-color: #FFF0F5;
+    border: 2px solid #DDA0DD;
+    color: #8A2BE2;
+    padding: 12px 20px;
+    border-radius: 30px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 14px;
+}
+
+.aba-btn:hover {
+    background-color: #FFE4E1;
+}
+
+.aba-btn.ativa {
+    background-color: #FF1493;
+    border-color: #FF1493;
+    color: white;
+    box-shadow: 0 4px 15px rgba(255, 20, 147, 0.3);
+}
+
+.form-central {
+    display: flex;
+    flex-direction: column;
+}
+
+.escondido {
+    display: none !important;
 }
 
 .btn-enviar {
@@ -385,12 +434,31 @@ h2 {
     cursor: pointer;
     box-shadow: 0 6px 20px rgba(37, 211, 102, 0.3);
     transition: all 0.3s ease;
+    width: 100%;
 }
 
 .btn-enviar:hover {
     background-color: #1ebd58;
     transform: translateY(-3px);
-    box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+}
+
+.btn-enviar-frete {
+    background-color: #008CBA;
+    color: white;
+    padding: 18px;
+    border: none;
+    border-radius: 16px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(0, 140, 186, 0.3);
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.btn-enviar-frete:hover {
+    background-color: #007399;
+    transform: translateY(-3px);
 }
 
 /* RODAPÉ */
@@ -455,61 +523,4 @@ footer {
     #encomendas {
         padding: 40px 25px;
     }
-}
-/* DESIGN DA CENTRAL DE ENCOMENDAS - ABAS */
-.Abas-container {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-bottom: 30px;
-}
-
-.aba-btn {
-    background-color: #FFF0F5;
-    border: 2px solid #DDA0DD;
-    color: #8A2BE2;
-    padding: 12px 20px;
-    border-radius: 30px;
-    font-weight: 700;
-    cursor: pointer;
-    transition: 0.3s;
-    font-size: 14px;
-}
-
-.aba-btn:hover {
-    background-color: #FFE4E1;
-}
-
-.aba-btn.ativa {
-    background-color: #FF1493;
-    border-color: #FF1493;
-    color: white;
-    box-shadow: 0 4px 15px rgba(255, 20, 147, 0.3);
-}
-
-.form-central {
-    display: flex;
-    flex-direction: column;
-}
-
-.escondido {
-    display: none !important;
-}
-
-.btn-enviar-frete {
-    background-color: #008CBA; /* Azul para diferenciar o botão de frete */
-    color: white;
-    padding: 18px;
-    border: none;
-    border-radius: 16px;
-    font-size: 16px;
-    font-weight: 700;
-    cursor: pointer;
-    box-shadow: 0 6px 20px rgba(0, 140, 186, 0.3);
-    transition: all 0.3s ease;
-}
-
-.btn-enviar-frete:hover {
-    background-color: #007399;
-    transform: translateY(-3px);
 }
