@@ -55,6 +55,14 @@ function calcularFreteLocal() {
     }
 }
 
+// Vincula a função de cálculo ao evento de mudança do select (Garantia de funcionamento)
+document.addEventListener("DOMContentLoaded", function() {
+    const selectRegiao = document.getElementById('regiao-frete');
+    if(selectRegiao) {
+        selectRegiao.addEventListener('change', calcularFreteLocal);
+    }
+});
+
 // Envio do Formulário de Orçamento
 document.getElementById('form-orcamento').addEventListener('submit', function(event) {
     event.preventDefault();
@@ -66,12 +74,17 @@ document.getElementById('form-orcamento').addEventListener('submit', function(ev
     window.open(`https://wa.me/${numeroWhats}?text=${encodeURIComponent(texto)}`, '_blank');
 });
 
-// Envio do Formulário de Frete com o Cálculo Embutido
+// Envio do Formulário de Frete Inteligente (CORRIGIDO)
 document.getElementById('form-frete').addEventListener('submit', function(event) {
     event.preventDefault();
     const nome = document.getElementById('nome-frete').value;
     const regiaoKey = document.getElementById('regiao-frete').value;
     const endereco = document.getElementById('endereco-frete').value;
+
+    if (!regiaoKey) {
+        alert("Por favor, selecione uma cidade/região.");
+        return;
+    }
 
     const dadosFrete = tabelaFretes[regiaoKey];
     const valorTexto = regiaoKey === 'outros' ? "A combinar" : `R$ ${dadosFrete.valor.toFixed(2).replace('.', ',')}`;
