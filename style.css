@@ -456,3 +456,60 @@ footer {
         padding: 40px 25px;
     }
 }
+/* DESIGN DA CENTRAL DE ENCOMENDAS - ABAS */
+.Abas-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.aba-btn {
+    background-color: #FFF0F5;
+    border: 2px solid #DDA0DD;
+    color: #8A2BE2;
+    padding: 12px 20px;
+    border-radius: 30px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 14px;
+}
+
+.aba-btn:hover {
+    background-color: #FFE4E1;
+}
+
+.aba-btn.ativa {
+    background-color: #FF1493;
+    border-color: #FF1493;
+    color: white;
+    box-shadow: 0 4px 15px rgba(255, 20, 147, 0.3);
+}
+
+.form-central {
+    display: flex;
+    flex-direction: column;
+}
+
+.escondido {
+    display: none !important;
+}
+
+.btn-enviar-frete {
+    background-color: #008CBA; /* Azul para diferenciar o botão de frete */
+    color: white;
+    padding: 18px;
+    border: none;
+    border-radius: 16px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(0, 140, 186, 0.3);
+    transition: all 0.3s ease;
+}
+
+.btn-enviar-frete:hover {
+    background-color: #007399;
+    transform: translateY(-3px);
+}
