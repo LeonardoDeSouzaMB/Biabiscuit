@@ -6,14 +6,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Quicksand', sans-serif; /* Letra moderna, arredondada e limpa */
+    font-family: 'Quicksand', sans-serif;
 }
 
 body {
     background: linear-gradient(135deg, #FFF0F5 0%, #FFE4E1 50%, #E6E6FA 100%) !important;
     background-size: cover !important;
     background-attachment: fixed !important;
-    background-image: none !important;
     color: #4A154B; 
     scroll-behavior: smooth; 
     -webkit-font-smoothing: antialiased;
@@ -35,7 +34,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 8%;
+    padding: 10px 8%; /* Ajuste para dar mais espaço vertical */
     border-bottom: 2px solid rgba(255, 20, 147, 0.15);
     position: sticky;
     top: 0;
@@ -43,7 +42,7 @@ header {
     box-shadow: 0 4px 20px rgba(74, 21, 75, 0.04);
 }
 
-/* AJUSTE DO NOVO LOGO COM MASCOTE */
+/* AJUSTE DO NOVO LOGO COM MASCOTE - AGORA MAIOR */
 .logo-link {
     display: flex;
     align-items: center;
@@ -51,13 +50,13 @@ header {
 }
 
 .logo-imagem {
-    height: 75px; /* Altura perfeita para não desconfigurar o menu */
-    width: auto;  /* Mantém a proporção redondinha da imagem */
+    height: 120px; /* Aumentei de 75px para 120px */
+    width: auto;
     transition: transform 0.3s ease;
 }
 
 .logo-imagem:hover {
-    transform: scale(1.05); /* Leve zoom quando passa o mouse */
+    transform: scale(1.05);
 }
 
 nav ul {
@@ -98,7 +97,7 @@ nav ul li a:hover {
 
 /* HERO (SEÇÃO PRINCIPAL) */
 .hero {
-    padding: 140px 5% 100px 5%;
+    padding: 160px 5% 100px 5%; /* Ajuste de padding devido à logo maior */
     text-align: center;
 }
 
@@ -155,14 +154,14 @@ h2 {
     margin-bottom: 15px;
 }
 
-.subtitulo-secao, .form-ajuda {
+.subtitulo-secao {
     font-size: 16px;
     color: #7a4b7d;
     margin-bottom: 60px;
     font-weight: 600;
 }
 
-/* VITRINE DE PRODUTOS "ESTILO FLUIDO E DESENHADO" */
+/* VITRINE DE PRODUTOS */
 .galeria-container {
     display: flex;
     justify-content: center;
@@ -177,12 +176,7 @@ h2 {
     width: 310px;
     box-shadow: 0 10px 30px rgba(74, 21, 75, 0.03);
     border: 1px solid rgba(230, 230, 250, 0.7);
-    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-
-.produto-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 40px rgba(138, 43, 226, 0.1);
+    transition: all 0.4s ease;
 }
 
 .imagem-wrapper {
@@ -197,11 +191,6 @@ h2 {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-
-.produto-card:hover .imagem-wrapper img {
-    transform: scale(1.06);
 }
 
 .produto-card h3 {
@@ -216,7 +205,6 @@ h2 {
     font-size: 14px;
     color: #666;
     line-height: 1.6;
-    font-weight: 500;
 }
 
 /* SEÇÃO COMO FUNCIONA */
@@ -238,22 +226,12 @@ h2 {
     padding: 40px 25px;
     border-radius: 24px;
     width: 300px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.01);
-    border: 1px solid rgba(230, 230, 250, 0.5);
 }
 
 .passo-icone {
     font-size: 38px;
     color: #FF1493;
     margin-bottom: 20px;
-}
-
-.passo-card h3 {
-    font-family: 'Comfortaa', cursive;
-    font-weight: 700;
-    font-size: 18px;
-    margin-bottom: 12px;
-    color: #8A2BE2;
 }
 
 /* SOBRE MIM */
@@ -269,40 +247,9 @@ h2 {
     background: #FFFFFF;
     padding: 60px 50px;
     border-radius: 32px;
-    box-shadow: 0 15px 40px rgba(74, 21, 75, 0.03);
-    border: 1px solid rgba(230, 230, 250, 0.6);
-}
-
-.sobre-texto p {
-    margin-bottom: 25px;
-    line-height: 1.8;
-    font-size: 16.5px;
-    color: #555;
-    font-weight: 500;
-}
-
-.btn-secundario {
-    display: inline-block;
-    background-color: transparent;
-    color: #8A2BE2;
-    border: 2px solid #8A2BE2;
-    padding: 12px 35px;
-    text-decoration: none;
-    border-radius: 50px;
-    font-weight: 700;
-    transition: all 0.3s ease;
-}
-
-.btn-secundario:hover {
-    background-color: #8A2BE2;
-    color: white;
 }
 
 /* DEPOIMENTOS */
-.depoimentos-secao {
-    background-color: rgba(255, 255, 255, 0.35);
-}
-
 .depoimentos-container {
     display: flex;
     justify-content: center;
@@ -317,210 +264,64 @@ h2 {
     padding: 30px;
     border-radius: 24px;
     width: 450px;
-    text-align: left;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.01);
-    border: 1px solid rgba(230, 230, 250, 0.5);
 }
 
-.depoimento-perfil {
-    display: flex;
-    align-items: center;
-    gap: 18px;
-    margin-bottom: 20px;
-}
-
-.foto-cliente {
-    width: 65px;
-    height: 65px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid #FFF0F5;
-}
-
-.estrelas {
-    color: #FFD700;
-    font-size: 13px;
-    margin-top: 5px;
-}
-
-/* DESIGN DA CENTRAL DE ENCOMENDAS - ABAS */
+/* CENTRAL DE ENCOMENDAS */
 #encomendas {
     background-color: #FFFFFF;
     padding: 60px 50px;
     max-width: 650px;
     margin: 80px auto;
     border-radius: 28px;
-    box-shadow: 0 20px 50px rgba(74, 21, 75, 0.05);
-    border: 1px solid rgba(230, 230, 250, 0.8);
 }
 
-#encomendas h2 {
-    color: #FF1493;
-}
-
-#form-encomenda label {
-    margin-bottom: 10px;
-    font-weight: 700;
-    font-size: 14px;
-    color: #4A154B;
-}
-
-#form-encomenda input, #form-encomenda textarea, .form-central input, .form-central textarea {
+.form-central input, .form-central textarea {
     padding: 16px;
     margin-bottom: 25px;
     border: 1px solid rgba(221, 160, 221, 0.6);
     border-radius: 16px;
     background-color: #FFF0F5;
-    font-size: 14.5px;
-    font-weight: 500;
-    transition: all 0.3s ease;
     width: 100%;
 }
 
-#form-encomenda input:focus, #form-encomenda textarea:focus, .form-central input:focus, .form-central textarea:focus {
-    outline: none;
-    border-color: #FF1493;
-    background-color: #FFFFFF;
-    box-shadow: 0 0 12px rgba(255, 20, 147, 0.15);
-}
-
-.Abas-container {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-bottom: 30px;
-}
-
 .aba-btn {
-    background-color: #FFF0F5;
-    border: 2px solid #DDA0DD;
-    color: #8A2BE2;
     padding: 12px 20px;
     border-radius: 30px;
-    font-weight: 700;
-    cursor: pointer;
-    transition: 0.3s;
-    font-size: 14px;
-}
-
-.aba-btn:hover {
-    background-color: #FFE4E1;
-}
-
-.aba-btn.ativa {
-    background-color: #FF1493;
-    border-color: #FF1493;
-    color: white;
-    box-shadow: 0 4px 15px rgba(255, 20, 147, 0.3);
-}
-
-.form-central {
-    display: flex;
-    flex-direction: column;
-}
-
-.escondido {
-    display: none !important;
 }
 
 .btn-enviar {
     background-color: #25D366;
     color: white;
     padding: 18px;
-    border: none;
     border-radius: 16px;
-    font-size: 16px;
-    font-weight: 700;
-    cursor: pointer;
-    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.3);
-    transition: all 0.3s ease;
     width: 100%;
-}
-
-.btn-enviar:hover {
-    background-color: #1ebd58;
-    transform: translateY(-3px);
-}
-
-.btn-enviar-frete {
-    background-color: #008CBA;
-    color: white;
-    padding: 18px;
-    border: none;
-    border-radius: 16px;
-    font-size: 16px;
-    font-weight: 700;
-    cursor: pointer;
-    box-shadow: 0 6px 20px rgba(0, 140, 186, 0.3);
-    transition: all 0.3s ease;
-    width: 100%;
-}
-
-.btn-enviar-frete:hover {
-    background-color: #007399;
-    transform: translateY(-3px);
 }
 
 /* RODAPÉ */
 footer {
     background-color: #4A154B;
     color: white;
-    text-align: center;
     padding: 50px 5%;
 }
 
-.redes-sociais a {
-    color: #FF1493;
-    font-size: 22px;
-    text-decoration: none;
-    font-weight: 700;
-}
-
-/* BOTÃO FLUTUANTE DO WHATSAPP */
+/* BOTÃO FLUTUANTE */
 .whatsapp-flutuante {
     position: fixed;
     bottom: 30px;
     right: 30px;
     background-color: #25D366;
-    color: white;
+    border-radius: 50%;
     width: 65px;
     height: 65px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 34px;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.25);
-    z-index: 1000;
-    text-decoration: none;
-    transition: all 0.3s ease;
 }
 
-.whatsapp-flutuante:hover {
-    transform: scale(1.1) translateY(-3px);
-}
-
-/* RESPONSIVIDADE (CELULAR) */
+/* RESPONSIVIDADE */
 @media (max-width: 768px) {
     header {
         flex-direction: column;
-        gap: 20px;
-        text-align: center;
         padding: 20px 5%;
     }
-    nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
-    }
-    nav ul li {
-        margin-left: 0;
-        margin: 0 10px;
-    }
-    .hero h1 {
-        font-size: 34px;
-    }
-    #encomendas {
-        padding: 40px 25px;
+    .hero {
+        padding: 200px 5% 100px 5%; /* Padding ainda maior no mobile */
     }
 }
